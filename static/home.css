@@ -1,0 +1,244 @@
+header {
+    background-color: rgb(70, 70, 125);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+    font-family:'Times New Roman';
+  }
+
+body{
+  margin: 0px;
+}
+
+main{
+  background-image: url('images/image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  
+/* .card {
+  width: 50%;
+  border-radius: 10px;
+  border: 2px solid gray;
+  padding: 20px;
+  box-sizing: border-box;
+} */
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 500%;
+  animation: slide 10s infinite;
+}
+
+.slide {
+  width: 20%;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 920px;
+  /* padding: 30px;  */
+}
+
+.form-container {
+  border-radius: 25px;
+  height: 550px;
+  background-color: rgba(70, 70, 125,0.35);
+  margin: 70px 50px;
+  padding: 50px;
+  flex: 6;
+}
+
+.form-container h1{
+  margin-top: 10px;
+  font-size: 80px;
+}
+
+.form-container p{
+  font-size: 20px;
+}
+
+.mid-container{
+  flex:3;
+}
+
+.image-container-big {
+  border-radius: 25px;
+  height: 650px;
+  position: relative; /* make the container relative so that absolute positioning works inside it */
+  display: inline-block;
+  margin: 70px 50px;
+  padding: 0px;
+  flex: 7;
+}
+.image-container {
+  position: relative;
+}
+.price {
+  width: 60%;
+  height: 40px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  font-size: 26px;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease-in-out;
+}
+
+.price:hover {
+  transform: translate(-50%, -55%);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.image-container img {
+  border-radius: 25px;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  /* height: 550px;
+  background-color: rgba(70, 70, 125,0.35);
+  margin: 70px 50px;
+  padding: 50px;
+  flex: 7; */
+}
+
+form {
+  width: 100%;
+}
+
+/* img {
+  max-width: 100%;
+  height: auto;
+} */
+
+
+  .titleName h1 {
+    margin: 10px;
+    letter-spacing: 3px;
+    font-size: 45px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin-right: 50px;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 20px;
+  }
+  
+  nav a {
+    color: white;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 19px;
+  }
+
+  .image-card img{
+    height: 400px;
+    width: 300px;
+  }
+
+  .button-container{
+    margin-top: 80px;
+    display: flex;
+    width: 100%;
+    height: 60px;
+  }
+
+  #file {
+    display: none; /* hide the file input element */
+  }
+  .custom-file-upload {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: rgb(70, 70, 125);;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex : 1;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: 0.2s;
+  }
+
+  .custom-file-upload:hover {
+    background-color: rgba(70, 70, 125, 0.783);
+  }
+
+  .predict-button {
+    border:none;
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: rgb(70, 70, 125);;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex : 1;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: 0.2s;
+  }
+
+  .predict-button:hover{
+    background-color: rgba(70, 70, 125, 0.783);
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-20%);
+    }
+    45% {
+      transform: translateX(-20%);
+    }
+    50% {
+      transform: translateX(-40%);
+    }
+    70% {
+      transform: translateX(-40%);
+    }
+    75% {
+      transform: translateX(-60%);
+    }
+    95% {
+      transform: translateX(-60%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  
+  
+  

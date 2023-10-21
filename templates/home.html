@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GlassFit</title>
+    <link rel="stylesheet" type="text/css" href="{{ css_url }}">
+  </head>
+  <body>
+    <header>
+      <div class="titleName">
+        <h1>GlassFit</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Profile</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <div class="container">
+        <div class="form-container">
+          <h1>Try Our Face Shape Predictor</h1>
+          <p>We provide assistance in selecting the most flattering eyewear frames for your face, taking into account your face-shape.</p>
+          <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+            <div class="button-container">
+              <label for="file" class="custom-file-upload" id="file-label">UPLOAD</label>
+              <input type="file" name="file" id="file">
+              <br>
+              <input type="submit" value="PREDICT" class="predict-button" id="predict-button" style="display:none;">
+            </div>
+          </form>
+        </div>
+        <div class="mid-container"></div>
+        <div class="image-container-big">
+        <div class="slider-container">
+          <div class="slider">
+            <div class="slide">
+              <div class="image-container">
+                <img src="{{ url_for('static', filename='images/Aviators.jpg') }}"> 
+                <div class="price">Aviator Frame ₹400</div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <img src="{{ url_for('static', filename='images/Cateye.jpg') }}"> 
+                <div class="price">Cat Eye Frame ₹350</div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <img src="{{ url_for('static', filename='images/Square.jpg') }}"> 
+                <div class="price">Square ₹450</div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="image-container">
+                <img src="{{ url_for('static', filename='images/Round.jpg') }}"> 
+                <div class="price">Round ₹300</div>
+              </div>
+            </div>
+          </div>
+        </div> 
+        </div>       
+      </div>
+    </main>
+    
+    <footer>
+    </footer>
+  </body>
+  <script>
+    const fileInput = document.getElementById('file');
+    const fileLabel = document.getElementById('file-label');
+    const predictButton = document.getElementById('predict-button');
+
+    fileInput.addEventListener('change', () => {
+      fileLabel.classList.add('uploaded');
+      fileLabel.style.display = 'none';
+      predictButton.style.display = 'inline-block';
+    });
+  </script>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GlassFit</title>
+    <link rel="stylesheet" type="text/css" href="{{ css_url }}">
+  </head>
+  <body>
+    <header>
+      <div class="titleName">
+        <h1>GlassFit</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Profile</a></li>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1>Face Shape Predictor - Results</h1>
+        <hr>
+        {% if prediction %}
+          <p>The predicted face shape is {{ prediction }}, so <b>Rectangular</b> frame will suit you. </p>
+        {% else %}
+          <p>No prediction was made.</p>
+        {% endif %}
+        <a href="#catalog" class="button">Browse for frames</a>
+      </div>
+
+      <div class="between-title">
+        <h1>Rectangular</h1>
+      </div>
+
+      <div class="catalog">
+        <div class="product-card">
+          <img src="{{ url_for('static', filename='images_catalog/Rectangle1.jpg') }}" alt="Product 1">
+          <h2>Product 1</h2>
+          <p>₹999</p>
+          <a href="#" class="cart-icon">&#128722; Add to Cart</a>
+        </div>
+        <div class="product-card">
+          <img src="{{ url_for('static', filename='images_catalog/Rectangle2.jpg') }}" alt="Product 2">
+          <h2>Product 2</h2>
+          <p>₹799</p>
+          <a href="#" class="cart-icon">&#128722; Add to Cart</a>
+        </div>
+        <div class="product-card">
+          <img src="{{ url_for('static', filename='images_catalog/Rectangle3.jpg') }}" alt="Product 3">
+          <h2>Product 3</h2>
+          <p>₹1149</p>
+          <a href="#" class="cart-icon">&#128722; Add to Cart</a>
+        </div>
+        <div class="product-card">
+          <img src="{{ url_for('static', filename='images_catalog/Rectangle4.jpg') }}" alt="Product 4">
+          <h2>Product 4</h2>
+          <p>₹2119</p>
+          <a href="#" class="cart-icon">&#128722; Add to Cart</a>
+        </div>
+      </div>
+
+      <div class="catalog">
+        <div class="product-card">
+          <img src="{{ url_for('static', filename='images_catalog/Rectangle5.jpg') }}" alt="Product 5">
+          <h2>Product 5</h2>
+          <p>₹1199</p>
+          <a href="#" class="cart-icon">&#128722; Add to Cart</a>
+        </div>
+        <div class="product-card">
+          <img src="{{ url_for('static', filename='images_catalog/Rectangle6.jpg') }}" alt="Product 6">
+          <h2>Product 6</h2>
+          <p>₹679</p>
+          <a href="#" class="cart-icon">&#128722; Add to Cart</a>
+        </div>
+        <div class="product-card">
+          <img src="{{ url_for('static', filename='images_catalog/Rectangle7.jpg') }}" alt="Product 7">
+          <h2>Product 7</h2>
+          <p>₹1349</p>
+          <a href="#" class="cart-icon">&#128722; Add to Cart</a>
+        </div>
+        <div class="product-card">
+          <img src="{{ url_for('static', filename='images_catalog/Rectangle8.jpg') }}" alt="Product 8">
+          <h2>Product 8</h2>
+          <p>₹1419</p>
+          <a href="#" class="cart-icon">&#128722; Add to Cart</a>
+        </div>
+      </div>
+
+      <div class="catalog">
+        <div class="product-card">
+          <img src="{{ url_for('static', filename='images_catalog/Rectangle9.jpg') }}" alt="Product 9">
+          <h2>Product 9</h2>
+          <p>₹999</p>
+          <a href="#" class="cart-icon">&#128722; Add to Cart</a>
+        </div>
+        <div class="product-card">
+          <img src="{{ url_for('static', filename='images_catalog/Rectangle10.jpg') }}" alt="Product 10">
+          <h2>Product 10</h2>
+          <p>₹779</p>
+          <a href="#" class="cart-icon">&#128722; Add to Cart</a>
+        </div>
+        <div class="product-card">
+          <img src="{{ url_for('static', filename='images_catalog/Rectangle11.jpg') }}" alt="Product 11">
+          <h2>Product 11</h2>
+          <p>₹3149</p>
+          <a href="#" class="cart-icon">&#128722; Add to Cart</a>
+        </div>
+        <div class="product-card">
+          <img src="{{ url_for('static', filename='images_catalog/Rectangle12.jpg') }}" alt="Product 12">
+          <h2>Product 12</h2>
+          <p>₹2119</p>
+          <a href="#" class="cart-icon">&#128722; Add to Cart</a>
+        </div>
+      </div>
+      
+    </main>
+  </body>
+</html>
